@@ -16,7 +16,4 @@ class fnc{
     }
 }
 
-$Obj = new fnc();
-
-print $Obj -> user_age("Alex", 2004);
 ?>
