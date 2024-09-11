@@ -18,6 +18,7 @@ spl_autoload_register('classAutoLoad');
 $ObjLayouts = new layouts();
 $ObjMenus = new menus();
 $ObjHeadings = new headings();
+$ObjCont = new contents();
 
 //$arr = ["black", "white", "green", "red"];
 
