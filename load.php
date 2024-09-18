@@ -1,45 +1,44 @@
 <?php
 
-//Class Auto Load
+// Class Auto Load 
 
-function classAutoload($classname){
-$directories = ["contents", "layouts", "menus"];
+function classAutoLoad($classname){
 
-foreach($directories AS $dir){
-    $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
-    if(file_exists($filename) AND is_readable($filename)){
-        require_once $filename;
+    $directories = ["contents", "layouts", "menus"];
+
+    foreach($directories AS $dir){
+        $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
+        if(file_exists($filename) AND is_readable($filename)){
+            require_once $filename;
+        }
     }
 }
-}
+
 spl_autoload_register('classAutoLoad');
 
 // Create instances of all classes
-$ObjLayouts = new layouts();
-$ObjMenus = new menus();
-$ObjHeadings = new headings();
-$ObjCont = new contents();
+    $ObjLayouts = new layouts();
+    $ObjMenus = new menus();
+    $ObjHeadings = new headings();
+    $ObjCont = new contents();
 
-//$arr = ["black", "white", "green", "red"];
+require "includes/constants.php";
+require "includes/dbConnection.php";
 
-//foreach($arr AS $color){
- //   print $color . "<br>";
-//}
+$conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
 
-//print dirname(__FILE__);
-//print "<br>";
-//print "<br>";
-//print $_SERVER["PHP_SELF"];
-//print "<br>";
-//print "<br>";
-//print basename($_SERVER["PHP_SELF"]);
-//print "<br>";
-//print "<br>";
 
-//if(file_exists("index.php")){
-//    print "yes";
-//}
-//else{
-//    print "no";
-//}
-?>
+// print 
+// print "<br>";
+// print "<br>";
+// print $_SERVER["PHP_SELF"];
+// print "<br>";
+// print "<br>";
+// print basename($_SERVER["PHP_SELF"]);
+// print "<br>";
+// print "<br>";
+// if(file_exists("index.php") AND is_readable("index.php")){
+//     print "yes";
+// }else{
+//     print "no";
+// }

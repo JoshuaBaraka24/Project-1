@@ -2,7 +2,7 @@
 class layouts{
     public function heading(){
         ?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,12 +15,11 @@ class layouts{
     }
     public function footer(){
         ?>
-        <div class="footer">
-            Copyright &copy; ICS <?php print date("Y");?>
-    </div>
-    </body>
-    </html>
-    <?php
+<div class="footer">
+    Copyright &copy; ICS <?php print date("Y"); ?>
+</div>
+</body>
+</html>
+        <?php
     }
 }
-?>
