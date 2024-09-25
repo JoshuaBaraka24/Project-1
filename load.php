@@ -7,7 +7,7 @@ require "includes/dbConnection.php";
 
 function classAutoLoad($classname){
 
-    $directories = ["contents", "layouts", "menus"];
+    $directories = ["contents", "layouts", "menus", "forms" , "processes" ];
 
     foreach($directories AS $dir){
         $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
