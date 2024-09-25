@@ -1,5 +1,8 @@
 <?php
 
+require "includes/constants.php";
+require "includes/dbConnection.php";
+
 // Class Auto Load 
 
 function classAutoLoad($classname){
@@ -21,12 +24,19 @@ spl_autoload_register('classAutoLoad');
     $ObjMenus = new menus();
     $ObjHeadings = new headings();
     $ObjCont = new contents();
+    $ObjForm = new user_forms();
+    $conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
 
+// Create process instances
+
+$ObjAuth = new auth();
+$ObjAuth->signup($conn);
+/*
 require "includes/constants.php";
 require "includes/dbConnection.php";
 
 $conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
-
+*/
 
 // print 
 // print "<br>";
