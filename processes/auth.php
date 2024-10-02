@@ -77,7 +77,7 @@ $_SESSION['mailMsg'] = [
 
  $conf['site_initials'] = "ICS 2024";
 
- $conf['site_url'] = "http://localhost/api_d";
+ $conf['site_url'] = "http://localhost/Project-1";
 
 if(isset($_SESSION['mailMsg'])){
 
