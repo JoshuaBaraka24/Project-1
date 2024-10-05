@@ -35,6 +35,6 @@ spl_autoload_register('classAutoLoad');
 
 // Create process instances
 
-    $ObjAuth = new auth();
-    $ObjAuth->signup($conn, $ObjGlob, $ObjSendMail, $lang);
-
+$ObjAuth = new auth();
+$ObjAuth->signup($conn, $ObjGlob, $ObjSendMail, $lang, $conf);
+$ObjAuth->verify_code($conn, $ObjGlob, $ObjSendMail, $lang, $conf);
