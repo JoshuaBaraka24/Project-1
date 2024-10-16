@@ -19,7 +19,7 @@ class layouts{
         ?>
  
 <footer class="pt-3 mt-4 text-body-secondary border-top">
-Copyright &copy; ICS <?php print date("Y"); ?>
+Copyright &copy; QUICKBITE INC. <?php print date("Y"); ?>
       </footer>
     </div>
   </main>
