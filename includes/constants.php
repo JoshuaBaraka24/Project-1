@@ -15,5 +15,5 @@ date_default_timezone_set("AFRICA/Nairobi");
 
     $conf['ver_code_time'] = date("Y-m-d H:i:s", strtotime("+ 24hours"));
     $conf['verification_code'] = rand(100000,999999);
-    $conf['site_initials'] = "ICS 2024";
+    $conf['site_initials'] = "QUICKBITE";
     $conf['site_url'] = "$base_url/". DBNAME;
